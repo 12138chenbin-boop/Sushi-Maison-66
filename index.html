@@ -1,6 +1,279 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Sushi Maison 66 — Menu 2026"><title>Sushi Maison 66 — Menu</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="#home">SUSHI <span>MAISON</span> 66</a><nav><a href="#menu">Menu</a><a href="#info">Info</a></nav><a class="book" href="#menu">Scopri</a></header>
-<section id="home" class="hero"><div class="shade"></div><div class="hero-copy"><p class="eyebrow">SUSHI MAISON 66 · CREMA</p><h1>L'arte del sushi,<br><em>la nostra Maison.</em></h1><p>Menu 2026 · Pranzo &amp; Cena · All You Can Eat</p><a class="btn" href="#menu">Apri il menu</a></div></section>
-<main id="menu"><section class="menu"><div class="head"><div><p class="eyebrow">01 / MENU 2026</p><h2>Il menu della <em>Maison.</em></h2></div><p>Abbiamo mantenuto integralmente le due carte 2026 forniteci. Usa i pulsanti per passare da Pranzo a Cena.</p></div><div class="switch"><button class="active" data-view="pranzo">PRANZO <small>€15 / €17</small></button><button data-view="cena">CENA <small>€27</small></button></div><div id="summary" class="summary"></div><div id="cards" class="cards"></div></section></main>
-<section id="info" class="info"><p class="eyebrow">02 / INFO</p><h2>Una cena da <em>ricordare.</em></h2><p>Le informazioni su allergeni, prodotti surgelati, regole All You Can Eat e prezzi sono quelle riportate nelle carte 2026 originali.</p></section>
-<footer><strong>SUSHI MAISON 66</strong><span>Japanese dining · Italian soul</span><span>© 2026</span></footer><script src="menu.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sushi Maison 66 | Menu</title>
+
+    <meta
+        name="description"
+        content="Sushi Maison 66 - Menu Pranzo e Cena"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        SUSHI <span>MAISON</span> 66
+    </a>
+
+    <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#info">Info</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            SUSHI MAISON 66 · CREMA
+        </div>
+
+        <h1>
+            L'arte del sushi,
+            <em>la nostra Maison.</em>
+        </h1>
+
+        <p>
+            Menu Pranzo e Cena 2026
+        </p>
+
+        <a href="#menu" class="hero-button">
+            SCOPRI IL MENU
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu" class="menu-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                01 / MENU
+            </div>
+
+            <h2>
+                Il menu della
+                <em>Maison.</em>
+            </h2>
+
+        </div>
+
+        <p>
+            Scopri tutti i nostri piatti.
+            Cerca un piatto oppure scegli
+            una categoria.
+        </p>
+
+    </div>
+
+
+    <!-- PRANZO / CENA -->
+
+    <div class="service-switch">
+
+        <button
+            class="service-button active"
+            data-service="pranzo"
+        >
+            <span>PRANZO</span>
+            <small>€15 / €17</small>
+        </button>
+
+
+        <button
+            class="service-button"
+            data-service="cena"
+        >
+            <span>CENA</span>
+            <small>€27</small>
+        </button>
+
+    </div>
+
+
+    <!-- REGOLE -->
+
+    <div id="menuRules" class="menu-rules"></div>
+
+
+    <!-- PDF -->
+
+    <div class="pdf-buttons">
+
+        <a
+            href="menu/pranzo-2026.pdf"
+            target="_blank"
+            rel="noopener"
+        >
+            PDF PRANZO ↗
+        </a>
+
+        <a
+            href="menu/cena-2026.pdf"
+            target="_blank"
+            rel="noopener"
+        >
+            PDF CENA ↗
+        </a>
+
+    </div>
+
+
+    <!-- CATEGORIE -->
+
+    <div
+        id="categoryButtons"
+        class="category-buttons"
+    ></div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                id="menuSearch"
+                type="search"
+                placeholder="Cerca salmone, gamberi, 78..."
+                autocomplete="off"
+            >
+
+        </div>
+
+        <button id="clearSearch">
+            CANCELLA
+        </button>
+
+    </div>
+
+
+    <div
+        id="resultCounter"
+        class="result-counter"
+    ></div>
+
+
+    <!-- 菜单 -->
+
+    <div id="menuContainer"></div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section id="info" class="info-section">
+
+    <div class="eyebrow">
+        02 / INFO
+    </div>
+
+    <h2>
+        Una cena da
+        <em>ricordare.</em>
+    </h2>
+
+
+    <div class="info-grid">
+
+        <div>
+
+            <span>PRANZO</span>
+
+            <p>
+                Menu pranzo secondo disponibilità
+                e condizioni indicate nel menu.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>CENA</span>
+
+            <p>
+                Menu cena All You Can Eat.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>ALLERGENI</span>
+
+            <p>
+                In caso di allergie o intolleranze
+                chiedere sempre informazioni
+                al personale.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <strong>
+        SUSHI MAISON 66
+    </strong>
+
+    <span>
+        Japanese dining · Italian soul
+    </span>
+
+    <span>
+        © 2026
+    </span>
+
+</footer>
+
+
+<script src="menu.js"></script>
+
+</body>
+
+</html>
