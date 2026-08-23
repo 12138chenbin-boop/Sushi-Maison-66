@@ -6,30 +6,37 @@
 
   <meta
     name="description"
-    content="Sushi Maison 66 — L'arte del sushi, la nostra Maison."
+    content="Sushi Maison 66 — Menu Pranzo e Cena 2026"
   >
 
   <title>Sushi Maison 66 — Menu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="site-header">
+<header class="topbar">
 
-  <a class="logo" href="#home">
+  <a class="brand" href="#home">
     SUSHI <span>MAISON</span> 66
   </a>
 
   <nav>
-    <a href="#about">La Maison</a>
+    <a href="#home">Home</a>
     <a href="#menu">Menu</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contatti</a>
+    <a href="#info">Info</a>
   </nav>
 
-  <a class="header-book" href="#contact">
+  <a class="book" href="#info">
     Prenota
   </a>
 
@@ -38,268 +45,190 @@
 
 <main>
 
-  <!-- HERO -->
+<!-- HERO -->
 
-  <section id="home" class="hero">
+<section id="home" class="hero">
 
-    <div class="hero-image"></div>
+  <div class="hero-bg"></div>
 
-    <div class="hero-content">
+  <div class="hero-copy">
 
-      <div class="eyebrow">
-        SUSHI MAISON 66
-      </div>
+    <p class="kicker">
+      SUSHI MAISON 66 · CREMA
+    </p>
 
-      <h1>
-        L'arte del sushi,<br>
-        <em>la nostra Maison.</em>
-      </h1>
+    <h1>
+      L'arte del sushi,
+      <br>
+      <em>la nostra Maison.</em>
+    </h1>
 
-      <p>
-        Una cucina contemporanea ispirata alla tradizione
-        giapponese e reinterpretata con sensibilità italiana.
+    <p>
+      Menu Pranzo e Cena · Cucina Fusion · All You Can Eat
+    </p>
+
+    <a class="btn" href="#menu">
+      Scopri il menu
+    </a>
+
+  </div>
+
+  <div class="hero-foot">
+    <span>MENU 2026</span>
+    <span>Scroll ↓</span>
+  </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu" class="menu">
+
+  <div class="section-head">
+
+    <div>
+      <p class="eyebrow">
+        01 / MENU
       </p>
-
-      <div class="hero-buttons">
-
-        <a class="gold-button" href="#menu">
-          Scopri il menu
-        </a>
-
-        <a class="outline-button" href="#contact">
-          Prenota un tavolo
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="hero-bottom">
-      <span>Crema · Italia</span>
-      <span>Scroll ↓</span>
-    </div>
-
-  </section>
-
-
-  <!-- INTRO -->
-
-  <section id="about" class="intro">
-
-    <div class="intro-number">
-      01
-    </div>
-
-    <div class="intro-content">
-
-      <span class="small-title">
-        LA MAISON
-      </span>
 
       <h2>
-        Ogni piatto<br>
-        racconta una <em>storia.</em>
+        Il menu della <em>Maison.</em>
       </h2>
-
-      <p>
-        Ingredienti selezionati, equilibrio e creatività.
-        Sushi Maison 66 nasce per trasformare una cena
-        in un'esperienza da ricordare.
-      </p>
-
     </div>
 
-  </section>
+    <p>
+      Seleziona Pranzo o Cena, scegli una categoria
+      oppure cerca direttamente il tuo piatto.
+    </p>
+
+  </div>
 
 
-  <!-- MENU -->
+  <!-- PRANZO / CENA -->
 
-  <section id="menu" class="menu-section">
+  <div class="service-switch">
 
-    <div class="menu-header">
+    <button
+      class="service active"
+      data-service="pranzo"
+    >
+      Pranzo
+      <small>€15 / €17</small>
+    </button>
 
-      <div>
-        <span class="small-title">
-          02 / MENU
-        </span>
+    <button
+      class="service"
+      data-service="cena"
+    >
+      Cena
+      <small>€27</small>
+    </button>
 
-        <h2>
-          Il menu della<br>
-          <em>Maison.</em>
-        </h2>
-      </div>
+  </div>
 
-      <p>
-        Scopri la nostra selezione.
-        Ogni categoria è pensata per accompagnarti
-        attraverso i sapori della Maison.
-      </p>
 
+  <!-- REGOLE -->
+
+  <div
+    class="rules"
+    id="rules"
+  ></div>
+
+
+  <!-- CATEGORIE -->
+
+  <div
+    class="category-nav"
+    id="categories"
+  ></div>
+
+
+  <!-- RICERCA -->
+
+  <div class="tools">
+
+    <label>
+      ⌕
+      <input
+        id="search"
+        type="search"
+        placeholder="Cerca salmone, gamberi, 78..."
+      >
+    </label>
+
+  </div>
+
+
+  <!-- MENU DINAMICO -->
+
+  <div id="menu-container"></div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section id="info" class="info">
+
+  <p class="eyebrow">
+    02 / INFO
+  </p>
+
+  <h2>
+    Una cena da <em>ricordare.</em>
+  </h2>
+
+  <div class="info-grid">
+
+    <div>
+      <span>ALL YOU CAN EAT</span>
+
+      <strong>
+        Pranzo €15 · Sabato/Festivi €17 · Cena €27
+      </strong>
     </div>
 
 
-    <!-- CATEGORY NAV -->
+    <div>
+      <span>REGOLE</span>
 
-    <div id="category-nav" class="category-nav">
+      <strong>
+        Bevande escluse · consumazione bevande obbligatoria
+        · piatti non consumati da €5 a €25
+      </strong>
     </div>
 
 
-    <!-- SEARCH -->
+    <div>
+      <span>ALLERGENI</span>
 
-    <div class="menu-tools">
-
-      <div class="search-box">
-
-        <span>⌕</span>
-
-        <input
-          id="menu-search"
-          type="search"
-          placeholder="Cerca un piatto..."
-        >
-
-      </div>
-
+      <strong>
+        Chiedi sempre informazioni al personale
+        in caso di allergie o intolleranze.
+      </strong>
     </div>
 
+  </div>
 
-    <!-- MENU -->
-
-    <div id="menu-container" class="menu-container">
-    </div>
-
-
-  </section>
-
-
-  <!-- GALLERY -->
-
-  <section id="gallery" class="gallery-section">
-
-    <div class="gallery-title">
-
-      <span class="small-title">
-        03 / GALLERY
-      </span>
-
-      <h2>
-        Taste the<br>
-        <em>Maison.</em>
-      </h2>
-
-    </div>
-
-    <div class="gallery-grid">
-
-      <div class="gallery-photo photo-large">
-        <img src="images/hero.jpg" alt="Sushi Maison 66">
-      </div>
-
-      <div class="gallery-photo">
-        <img src="images/sushi-01.jpg" alt="Sushi">
-      </div>
-
-      <div class="gallery-photo">
-        <img src="images/sushi-02.jpg" alt="Sashimi">
-      </div>
-
-      <div class="gallery-photo">
-        <img src="images/interior.jpg" alt="Sushi Maison 66 interior">
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact-section">
-
-    <span class="small-title">
-      04 / CONTATTI
-    </span>
-
-    <div class="contact-grid">
-
-      <div>
-
-        <h2>
-          Il vostro tavolo<br>
-          <em>vi aspetta.</em>
-        </h2>
-
-        <p>
-          Prenota la tua esperienza Sushi Maison 66.
-        </p>
-
-      </div>
-
-
-      <div class="contact-details">
-
-        <div>
-          <span>INDIRIZZO</span>
-          <strong>
-            Via __________, Crema
-          </strong>
-        </div>
-
-        <div>
-          <span>TELEFONO</span>
-          <strong>
-            +39 __________
-          </strong>
-        </div>
-
-        <div>
-          <span>ORARI</span>
-          <strong>
-            Mar — Dom · 19:00 — 23:30
-          </strong>
-        </div>
-
-        <div class="contact-buttons">
-
-          <a
-            class="gold-button"
-            href="tel:+390000000000"
-          >
-            Chiama
-          </a>
-
-          <a
-            class="dark-button"
-            href="https://wa.me/"
-            target="_blank"
-          >
-            WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
 </main>
 
 
 <footer>
 
-  <div class="footer-logo">
+  <strong>
     SUSHI MAISON 66
-  </div>
+  </strong>
 
-  <div>
+  <span>
     Japanese dining · Italian soul
-  </div>
+  </span>
 
-  <div>
-    © 2026 Sushi Maison 66
-  </div>
+  <span>
+    © 2026
+  </span>
 
 </footer>
 
